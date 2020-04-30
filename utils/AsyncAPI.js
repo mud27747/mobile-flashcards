@@ -2,11 +2,8 @@ import {
     AsyncStorage,
     Platform
 } from 'react-native'
-import {
-    Constants,
-    Notifications
-} from 'expo';
-
+import { Notifications} from 'expo';
+import { Constants } from 'expo-constants';
 import { appTheme } from '../utils/Helper';
 import * as Permissions from 'expo-permissions';
 
