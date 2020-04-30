@@ -3,11 +3,7 @@ import {
     Platform
 } from 'react-native'
 import { Notifications} from 'expo';
-<<<<<<< HEAD
 import Constants from 'expo-constants';
-=======
-import { Constants } from 'expo-constants';
->>>>>>> 76ce0d4809e87dbc71e7da6c350f4aba9c7c1b38
 import { appTheme } from '../utils/Helper';
 import * as Permissions from 'expo-permissions';
 
