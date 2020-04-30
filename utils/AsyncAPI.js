@@ -3,7 +3,7 @@ import {
     Platform
 } from 'react-native'
 import { Notifications} from 'expo';
-import { Constants } from 'expo-constants';
+import Constants from 'expo-constants';
 import { appTheme } from '../utils/Helper';
 import * as Permissions from 'expo-permissions';
 
@@ -19,7 +19,7 @@ export function getDecks() {
                 .then((allDecks) => {
                     allDecks.map((result, i, decks) => {
                         let key = decks[i][0];
-                        let value = (decks[i][1]) ? JSON.parse(decks[i][1]) : {}
+                        let value = (decks[i][1]) ? decks[i][1] : {}
                         completeDecks = {
                             ...completeDecks,
                             [key]: value
@@ -137,7 +137,7 @@ export function initiateLocalNotification() {
                         let notificationTime = new Date()
                         let currTime = notificationTime.getTime()
                         notificationTime.setHours(18, 0, 0)
-                        scheduleTime = notificationTime.getTime()
+                        let scheduleTime = notificationTime.getTime()
                         if (currTime > scheduleTime) {
                             //if current time is > 6pm then it will schedule next notification for next day 6pm
                             scheduleTime = scheduleTime + 86400000
